@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mijn Woonplaats</title>
+
+    <!-- Externe stijl voor lettertype -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Algemene stijlen */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        /* Header */
+        header {
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    background-image: url('grachten.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+
+        /* Centrale content */
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        /* Linkerdeel: 2 kolommen (mobile first = 100%) */
+        .left {
+            flex: 0 0 100%;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        .left ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        /* Rechterdeel: 9 kolommen (mobile first = 100%) */
+        .right {
+            flex: 0 0 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            background-color: #e0f7fa;
+        }
+
+        .right .article {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .right .article img {
+            margin-left: 10px;
+            width: 120px;
+            height: auto;
+            border: 1px solid #ccc;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        /* Mediaquery voor tablets/desktop */
+        @media (min-width: 768px) {
+            .left {
+                flex: 0 0 18%; /* ongeveer 2 van 11 kolommen */
+            }
+
+            .right {
+                flex: 0 0 77%; /* ongeveer 9 van 11 kolommen */
+                margin-left: 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Amsterdam</h1>
+    </header>
+
+    <main>
+        <!-- Linkerdeel: feitjes -->
+        <div class="left">
+            <h2>Feitjes over Amsterdam</h2>
+            <ul>
+                <li>Meer dan 160 grachten.</li>
+                <li>Het Rijksmuseum is wereldberoemd.</li>
+                <li>Meer fietsen dan inwoners.</li>
+                <li>Hoofdstad van Nederland.</li>
+                <li>Jaarlijks veel toeristen door het bloemenfestival.</li>
+            </ul>
+        </div>
+
+        <!-- Rechterdeel: artikelen -->
+        <div class="right">
+            <div class="article">
+                <div class="text">
+                    <h3>Rijksmuseum</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non felis nec libero feugiat dictum.</p>
+                </div>
+                <img src="rijksmuseum.jpg" alt="Rijksmuseum" width="60" height="60">
+            </div>
+
+            <div class="article">
+                <div class="text">
+                    <h3>Anne Frank Huis</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae ligula non purus sollicitudin tincidunt.</p>
+                </div>
+                <img src="museum.jpeg" alt="Anne Frank Huis" width="60" height="60">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 Mijn Woonplaats
+    </footer>
+</body>
+</html>
